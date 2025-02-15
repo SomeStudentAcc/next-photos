@@ -1,15 +1,15 @@
-'use client'; // Ensure this is a client-side component
+'use client'; 
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { CldImage } from "next-cloudinary";
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation"; // Import the hook for query params
+import { useSearchParams } from "next/navigation"; 
 
 export default function Edit() {
-  const searchParams = useSearchParams(); // Use useSearchParams hook
-  const publicId = searchParams.get("publicId"); // Get the publicId from the query parameters
+  const searchParams = useSearchParams();
+  const publicId = searchParams.get("publicId"); 
 
   const [transformation, setTransformation] = useState<
     | undefined
@@ -24,7 +24,6 @@ export default function Edit() {
   const [prompt, setPrompt] = useState("");
 
   useEffect(() => {
-    // You can set a default or handle missing publicId here
     if (!publicId) {
       console.error("Public ID is missing!");
     }

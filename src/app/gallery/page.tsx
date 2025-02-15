@@ -36,7 +36,7 @@ export default async function Gallary({
           <UploadButton />
         </div>
         <SearchForm initialSearch={search}/>
-        <GalleryGrid images={results.resources} />
+        <GalleryGrid images={results?.resources} />
       </div>
     </section>
   );
